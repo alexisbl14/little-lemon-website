@@ -1,8 +1,9 @@
 import logo from './logo.svg';
+import './App.css';
 
 function Footer() {
     return (
-        <footer>
+        <footer className="footer">
             <img src={logo} alt="Logo"/>
             <span>
                 <h3>Contact</h3>
