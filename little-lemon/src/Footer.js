@@ -1,6 +1,9 @@
+import logo from './logo.svg';
+
 function Footer() {
     return (
         <footer>
+            <img src={logo} alt="Logo"/>
             <span>
                 <h3>Contact</h3>
                 <p>Address</p>
