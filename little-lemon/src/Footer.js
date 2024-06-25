@@ -6,16 +6,16 @@ function Footer() {
         <footer className="footer">
             <img src={logo} alt="Logo"/>
             <span>
-                <h3>Contact</h3>
-                <p>Address</p>
-                <p>Phone Number</p>
-                <p>Email</p>
+                <h4 className="yellow-text">Contact</h4>
+                <h3 className="white-text">Address</h3>
+                <h3 className="white-text">Phone Number</h3>
+                <h3 className="white-text">Email</h3>
             </span>
             <span>
-                <h3>Social Media Links</h3>
-                <p>Twitter</p>
-                <p>Instagram</p>
-                <p>Facebook</p>
+                <h4 className="yellow-text">Social Media Links</h4>
+                <h3 className="white-text">Twitter</h3>
+                <h3 className="white-text">Instagram</h3>
+                <h3 className="white-text">Facebook</h3>
             </span>
         </footer>
     )

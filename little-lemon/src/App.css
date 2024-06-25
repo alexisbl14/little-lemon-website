@@ -46,7 +46,6 @@ ul.nav {
   justify-content: space-evenly;
   gap: 20px;
   list-style: none;
-  border: 2px black solid;
   align-items: center;
 }
 
@@ -60,6 +59,7 @@ a:link, a:visited {
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
+  background-color: #495E57;
 }
 
 h1 { /*medium 64 px Markazi*/
