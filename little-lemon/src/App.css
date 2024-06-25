@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200..800&family=Markazi+Text:wght@400..700&display=swap');
+
 .App {
   text-align: center;
 }
@@ -58,3 +61,74 @@ a:link, a:visited {
   justify-content: space-around;
   gap: 20px;
 }
+
+h1 { /*medium 64 px Markazi*/
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-size: 3em;
+  font-weight: 500;
+}
+
+h2 { /*regular 40 px Markazi*/
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-size: 2em;
+  font-weight: 400
+}
+
+h3 { /*medium 20 px Karla*/
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+h4 { /*bold 20 px Karla*/
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+h5 { /*bold 16 px Karla*/
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 0.75em;
+  font-weight: 700;
+}
+
+h6 { /*medium 24 px Markazi*/
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+p { /*regular 16 px Karla*/
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 0.75em;
+  font-weight: 400;
+}
+
+.green-text {
+  color: #495E57;
+}
+
+.black-text {
+  color: #333333;
+}
+
+.white-text {
+  color: #EDEFEE;
+}
+
+.yellow-text {
+  color: #F4CE14;
+}
+
+.red-text {
+  color: #EE9972
+}
+
+
