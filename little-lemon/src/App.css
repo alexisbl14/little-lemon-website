@@ -37,16 +37,19 @@
   }
 }
 
-.nav {
-  display: inline-flex;
+ul.nav {
+  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 20px;
   list-style: none;
+  border: 2px black solid;
+  align-items: center;
 }
 
-a {
+a:link, a:visited {
   text-decoration: none;
+  color: black
 }
 
 .footer {
