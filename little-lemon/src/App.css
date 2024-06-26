@@ -160,7 +160,7 @@ button {
 .hero {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #495E57;
   padding-inline: 20%;
 }
@@ -180,6 +180,28 @@ button {
   padding-top: 25px;
   width: 250px;
   height: auto;
+}
+
+.specials {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 1fr 1fr;
+  justify-content: space-between;
+  row-gap: 40px;
+  padding-inline: 20%;
+  padding-top: 120px;
+}
+
+.specials > h1 {
+  grid-column: 1 / span 2;
+}
+
+.specials > button {
+  justify-self: right;
+}
+
+.grid-item {
+  border: 1px solid black;
 }
 
 
