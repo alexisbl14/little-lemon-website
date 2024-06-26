@@ -47,6 +47,7 @@ ul.nav {
   gap: 20px;
   list-style: none;
   align-items: center;
+  padding-inline: 10%;
 }
 
 a:link, a:visited {
@@ -67,13 +68,19 @@ h1 { /*medium 64 px Markazi*/
   font-optical-sizing: auto;
   font-size: 3em;
   font-weight: 500;
+  margin: 0px;
+  padding: 0px;
+  line-height: 1;
 }
 
 h2 { /*regular 40 px Markazi*/
   font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
   font-size: 2em;
-  font-weight: 400
+  font-weight: 400;
+  margin-top: -8px;
+  padding: 0px;
+  line-height: 1;
 }
 
 h3 { /*medium 20 px Karla*/
@@ -81,6 +88,8 @@ h3 { /*medium 20 px Karla*/
   font-optical-sizing: auto;
   font-size: 1em;
   font-weight: 500;
+  margin: 0px;
+  padding: 0px;
 }
 
 h4 { /*bold 20 px Karla*/
@@ -88,6 +97,8 @@ h4 { /*bold 20 px Karla*/
   font-optical-sizing: auto;
   font-size: 1em;
   font-weight: 700;
+  margin: 0px;
+  padding: 0px;
 }
 
 h5 { /*bold 16 px Karla*/
@@ -95,6 +106,8 @@ h5 { /*bold 16 px Karla*/
   font-optical-sizing: auto;
   font-size: 0.75em;
   font-weight: 700;
+  margin: 0px;
+  padding: 0px;
 }
 
 h6 { /*medium 24 px Markazi*/
@@ -102,6 +115,8 @@ h6 { /*medium 24 px Markazi*/
   font-optical-sizing: auto;
   font-size: 1.25em;
   font-weight: 500;
+  margin: 0px;
+  padding: 0px;
 }
 
 p { /*regular 16 px Karla*/
@@ -109,6 +124,17 @@ p { /*regular 16 px Karla*/
   font-optical-sizing: auto;
   font-size: 0.75em;
   font-weight: 400;
+  margin: 0px;
+  padding: 0px;
+}
+
+button {
+  background-color: #F4CE14;
+  border: 0px;
+  border-radius: 16px;
+  padding: 12px 24px 12px 24px;
+  width: fit-content;
+  cursor: pointer;
 }
 
 .green-text {
@@ -129,6 +155,31 @@ p { /*regular 16 px Karla*/
 
 .red-text {
   color: #EE9972
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #495E57;
+  padding-inline: 20%;
+}
+
+.hero-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 25px;
+  width: 250px;
+  margin-top: 50px;
+}
+
+.hero-img {
+  position: relative;
+  margin-bottom: -5%;
+  padding-top: 25px;
+  width: 250px;
+  height: auto;
 }
 
 

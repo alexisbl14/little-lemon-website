@@ -1,7 +1,9 @@
+import Hero from "./Hero";
+
 function Main() {
     return (
         <main>
-            <p>Main Section</p>
+            <Hero />
         </main>
     )
 }
