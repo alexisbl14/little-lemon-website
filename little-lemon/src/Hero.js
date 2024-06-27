@@ -4,7 +4,7 @@ import './App.css';
 
 function Hero() {
     return (
-        <>
+        <section>
             <div className='hero'>
                 <div className='hero-body'>
                     <div>
@@ -16,7 +16,7 @@ function Hero() {
                 </div>
                 <img src={heroImg} alt="Hero" className='hero-img'/>
             </div>
-        </>
+        </section>
     )
 }
 
