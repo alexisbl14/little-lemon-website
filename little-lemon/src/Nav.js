@@ -13,7 +13,7 @@ function Nav() {
         <div>
             <nav>
                 <ul className="nav">
-                    <li><Link to="/" classname="nav-item"><img src={logo} alt="Logo"/></Link></li>
+                    <li><Link to="/" className="nav-item"><img src={logo} alt="Logo"/></Link></li>
                     <li><Link to="/"><h3 className="nav-item black-text">Home</h3></Link></li>
                     <li><Link to="/about"><h3 className="nav-item black-text">About</h3></Link></li>
                     <li><Link to="/menu"><h3 className="nav-item black-text">Menu</h3></Link></li>
