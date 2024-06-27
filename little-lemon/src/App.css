@@ -134,6 +134,7 @@ button {
   border-radius: 16px;
   padding: 12px 24px 12px 24px;
   width: fit-content;
+  height: fit-content;
   cursor: pointer;
 }
 
@@ -184,10 +185,11 @@ button {
 
 .specials {
   display: grid;
-  grid-template-columns: 200px 200px 200px;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   justify-content: space-between;
   row-gap: 40px;
+  column-gap: 28px;
   padding-inline: 20%;
   padding-top: 120px;
 }
@@ -198,10 +200,7 @@ button {
 
 .specials > button {
   justify-self: right;
-}
-
-.grid-item {
-  border: 1px solid black;
+  align-self: center;
 }
 
 

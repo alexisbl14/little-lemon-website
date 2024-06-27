@@ -12,9 +12,9 @@ function Hero() {
                         <h2 className='white-text'>Chicago</h2>
                     </div>
                     <h3 className='white-text'>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</h3>
-                    <button type="button" onClick={() => console.log("button clicked")}><h4>Reserve a Table</h4></button>
+                    <button type="button" onClick={() => console.log("button clicked")}><h4 className='black-text'>Reserve a Table</h4></button>
                 </div>
-                <img src={heroImg} alt="Hero Image" className='hero-img'/>
+                <img src={heroImg} alt="Hero" className='hero-img'/>
             </div>
         </>
     )
