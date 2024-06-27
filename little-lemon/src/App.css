@@ -186,21 +186,56 @@ button {
 .specials {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
   justify-content: space-between;
   row-gap: 40px;
-  column-gap: 28px;
+  column-gap: 30px;
   padding-inline: 20%;
   padding-top: 120px;
 }
 
 .specials > h1 {
   grid-column: 1 / span 2;
+  height: fit-content;
 }
 
 .specials > button {
   justify-self: right;
   align-self: center;
+}
+
+.special-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.special-img {
+  width: 100%;
+  height: auto;
+}
+
+.special-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  background-color: #EDEFEE;
+  height: 100%;
+}
+
+.special-info > div:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.special-info > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px;
+  align-items: center;
 }
 
 
