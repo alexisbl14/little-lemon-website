@@ -272,6 +272,46 @@ button {
   height: auto;
   background-color: #EDEFEE;
   border-radius: 16px;
-  box-shadow: 5px 5px 2px 1px rgb(0 0 0 / 20%);
 }
 
+.chicago {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding-inline: 20%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.chicago-body {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+
+}
+
+.chicago-img {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 500px;
+  min-width: 425px;
+}
+
+.chicago-img > img {
+  width: 280px;
+  height: auto;
+}
+
+.chicago-img > img:first-child {
+  position: relative;
+  align-self: flex-end;
+  margin-bottom: -15%;
+}
+
+.chicago-img > img:last-child {
+  position: relative;
+  z-index: -1;
+}

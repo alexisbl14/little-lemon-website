@@ -4,6 +4,7 @@ import CustomersSay from "./CustomersSay";
 import bruschettaImg from "./bruschetta.svg";
 import greekSaladImg from "./greek-salad.svg";
 import lemonDessertImg from "./lemon-dessert.svg";
+import Chicago from "./Chicago";
 
 
 function Main() {
@@ -56,6 +57,7 @@ function Main() {
             <Hero />
             <Specials specials={specials}/>
             <CustomersSay reviews={reviews}/>
+            <Chicago/>
         </main>
     )
 }
