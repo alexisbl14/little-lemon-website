@@ -1,5 +1,6 @@
 import Hero from "./Hero";
 import Specials from "./Specials";
+import CustomersSay from "./CustomersSay";
 import bruschettaImg from "./bruschetta.svg";
 import greekSaladImg from "./greek-salad.svg";
 import lemonDessertImg from "./lemon-dessert.svg";
@@ -25,11 +26,36 @@ function Main() {
             description: "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
             img: lemonDessertImg,
         }
-    ]
+    ];
+
+    const reviews = [
+        {
+            rating: 4.5,
+            name: "J. Smith",
+            notes: "Very pleasant atmosphere!"
+        },
+        {
+            rating: 5.0,
+            name: "A. Jones",
+            notes: "Great menu!"
+        },
+        {
+            rating: 4.2,
+            name: "H. James",
+            notes: "Super kind waiters!"
+        },
+        {
+            rating: 4.7,
+            name: "L. Adams",
+            notes: "Highly recommend if in Chicago!"
+        },
+    ];
+
     return (
         <main>
             <Hero />
             <Specials specials={specials}/>
+            <CustomersSay reviews={reviews}/>
         </main>
     )
 }
