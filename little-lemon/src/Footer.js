@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+import lemonLogo from './lemon-logo.svg';
 import './App.css';
 
 function Footer() {
     return (
         <footer className="footer">
-            <img src={logo} alt="Logo"/>
+            <img src={lemonLogo} alt="Lemon Logo"/>
             <span>
                 <h4 className="yellow-text">Contact</h4>
                 <h3 className="white-text">Address</h3>

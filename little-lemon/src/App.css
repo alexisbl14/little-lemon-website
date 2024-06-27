@@ -55,14 +55,6 @@ a:link, a:visited {
   color: black
 }
 
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  background-color: #495E57;
-}
-
 h1 { /*medium 64 px Markazi*/
   font-family: "Markazi Text", serif;
   font-optical-sizing: auto;
@@ -314,4 +306,23 @@ button {
 .chicago-img > img:last-child {
   position: relative;
   z-index: -1;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #495E57;
+}
+
+.footer > img {
+  height: 100px;
+}
+
+.footer > span > h4 {
+  margin-bottom: 20px;
 }
