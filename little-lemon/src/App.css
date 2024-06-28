@@ -71,6 +71,7 @@ h2 { /*regular 40 px Markazi*/
   font-size: 2em;
   font-weight: 400;
   margin-top: -8px;
+  margin-bottom: 0px;
   padding: 0px;
   line-height: 1;
 }
@@ -317,6 +318,7 @@ button {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: #495E57;
+  margin-top: auto;
 }
 
 .footer > img {
@@ -325,4 +327,24 @@ button {
 
 .footer > span > h4 {
   margin-bottom: 20px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #495E57;
+  padding: 40px 20%;
+}
+
+.form-entries {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  row-gap: 40px;
+}
+
+.booking-area {
+  border: 1px solid red;
+  ;
 }
