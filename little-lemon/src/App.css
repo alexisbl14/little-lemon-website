@@ -131,6 +131,15 @@ button {
   cursor: pointer;
 }
 
+label {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0px;
+  padding: 0px;
+}
+
 .green-text {
   color: #495E57;
 }
@@ -337,14 +346,49 @@ button {
   padding: 40px 20%;
 }
 
+.back-button {
+  margin-left: 20%;
+  margin-top: 10px;
+  width: 50px;
+}
+
 .form-entries {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-content: center;
+  margin-left: 20%;
+  margin-right: 20%;
   row-gap: 40px;
 }
 
-.booking-area {
-  border: 1px solid red;
-  ;
+.Field {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  gap: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.form > button {
+  align-self: center;
+}
+
+input, select {
+  background-color: #EDEFEE;
+  border: 0px;
+  border-radius: 16px;
+  width: 200px;
+  font-size: 1em;
+  font-family: "Karla", sans-serif;
+  color: #495E57;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+select {
+  width: 240px;
 }
