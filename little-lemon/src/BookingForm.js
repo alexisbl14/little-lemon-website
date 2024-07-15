@@ -1,45 +1,62 @@
+import { useState } from "react";
 import backButton from "./backButton.svg";
 
 function BookingForm() {
+
+    const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"])
+
+    const [date, setDate] = useState("");
+    const [time, setTime] = useState(availableTimes[0]);
+    const [numPeople, setNumPeople] = useState("1");
+    const [occasion, setOccasion] = useState("birthday");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Form Submitted!")
+
+        setDate("");
+        setTime(availableTimes[0]);
+        setNumPeople("1");
+        setOccasion("birthday");
+    }
+
+
     return (
         <section className="booking-area">
             <div className="heading">
                 <h1 className="yellow-text">Book a Table</h1>
                 <h2 className="white-text">Select Date and Time</h2>
             </div>
-            <div className="form">
+            <form onSubmit={handleSubmit} className="form">
                 <img className="back-button" src={backButton} alt="Back" onClick={() => console.log("Back button pressed!")}/>
                 <span className="form-entries">
                     <div className="Field">
                         <label htmlFor="date">Date For Reservation:</label>
-                        <input type="date" name="date"/>
+                        <input type="date" name="date" id="date" value={date} onChange={e => setDate(e.target.value)}/>
                     </div>
                     <div className="Field">
                         <label htmlFor="time">Time For Reservation:</label>
-                        <select name="time">
-                            <option value="17:00">17:00</option>
-                            <option value="18:00">18:00</option>
-                            <option value="19:00">19:00</option>
-                            <option value="20:00">20:00</option>
-                            <option value="21:00">21:00</option>
-                            <option value="22:00">22:00</option>
+                        <select name="time" id="time" value={time} onChange={e => setTime(e.target.value)}>
+                            {availableTimes.map((time) => {
+                                return <option key={time} value={time}>{time}</option>
+                            })}
                         </select>
                     </div>
                     <div className="Field">
                         <label htmlFor="numPeople">Number of People:</label>
-                        <input type="number" name="numPeople" min="1" max="12" placeholder="1"/>
+                        <input type="number" name="numPeople" id="numPeople" min="1" max="12" value={numPeople} onChange={e => setNumPeople(e.target.value)}/>
                     </div>
                     <div className="Field">
                         <label htmlFor="selectedOccasion">Occasion:</label>
-                        <select name="selectedOccasion">
+                        <select name="selectedOccasion" id="selectedOccasion" value={occasion} onChange={e => setOccasion(e.target.value)}>
                             <option value="birthday">Birthday</option>
                             <option value="engagement">Engagement</option>
                             <option value="anniversary">Anniversary</option>
                         </select>
                     </div>
                 </span>
-                <button type="button" onClick={() => console.log("button clicked")}><h4 className='black-text submit-button'>Submit</h4></button>
-            </div>
+                <button type="submit" onClick={() => console.log("submit button clicked")}><h4 className='black-text submit-button'>Submit</h4></button>
+            </form>
         </section>
     )
 }
