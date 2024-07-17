@@ -1,12 +1,12 @@
 import { useState } from "react";
 import backButton from "./backButton.svg";
 
-function BookingForm() {
+function BookingForm(props) {
 
-    const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"])
+    
 
     const [date, setDate] = useState("");
-    const [time, setTime] = useState(availableTimes[0]);
+    const [time, setTime] = useState(props.availableTimes[0]);
     const [numPeople, setNumPeople] = useState("1");
     const [occasion, setOccasion] = useState("birthday");
 
@@ -15,7 +15,7 @@ function BookingForm() {
         console.log("Form Submitted!")
 
         setDate("");
-        setTime(availableTimes[0]);
+        setTime(props.availableTimes[0]);
         setNumPeople("1");
         setOccasion("birthday");
     }
@@ -37,7 +37,7 @@ function BookingForm() {
                     <div className="Field">
                         <label htmlFor="time">Time For Reservation:</label>
                         <select name="time" id="time" value={time} onChange={e => setTime(e.target.value)}>
-                            {availableTimes.map((time) => {
+                            {props.availableTimes.map((time) => {
                                 return <option key={time} value={time}>{time}</option>
                             })}
                         </select>

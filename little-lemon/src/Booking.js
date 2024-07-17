@@ -1,9 +1,9 @@
 import BookingForm from "./BookingForm";
 
-function Booking() {
+function Booking(props) {
     return (
         <>
-            <BookingForm/>
+            <BookingForm availableTimes={props.availableTimes} setAvailableTimes={props.setAvailableTimes}/>
         </>
     )
 }
