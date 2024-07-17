@@ -32,7 +32,10 @@ function BookingForm(props) {
                 <span className="form-entries">
                     <div className="Field">
                         <label htmlFor="date">Date For Reservation:</label>
-                        <input type="date" name="date" id="date" value={date} onChange={e => setDate(e.target.value)}/>
+                        <input type="date" name="date" id="date" value={date} onChange={e => {
+                            setDate(e.target.value);
+                            props.setAvailableTimes({date: e.target.value});
+                            }}/>
                     </div>
                     <div className="Field">
                         <label htmlFor="time">Time For Reservation:</label>

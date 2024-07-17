@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import "./App.css";
 import { Routes, Route, Link } from 'react-router-dom';
-import { useState } from "react";
+import { useReducer, useState } from "react";
 import Homepage from './Homepage';
 import About from './About';
 import Menu from './Menu';
@@ -9,8 +9,18 @@ import Booking from './Booking';
 import Order from './Order';
 import Login from './Login';
 
+const updateTimes = (state, action) => {
+    return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+}
+
 function Nav() {
-    const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"])
+    const initializeTimes = () => {
+        return [];
+    }
+    const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+
+    console.log(availableTimes);
+    
     return(
         <div>
             <nav>
@@ -28,7 +38,7 @@ function Nav() {
                 <Route path="/" element={<Homepage/>} />
                 <Route path="/about" element={<About />} />
                 <Route path="/menu" element={<Menu />} />
-                <Route path="/reservations" element={<Booking availableTimes={availableTimes} setAvailableTimes={setAvailableTimes}/>} />
+                <Route path="/reservations" element={<Booking availableTimes={availableTimes} setAvailableTimes={dispatch}/>} />
                 <Route path="/order" element={<Order />} />
                 <Route path="/login" element={<Login />} />
             </Routes>
