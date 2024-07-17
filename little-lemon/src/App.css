@@ -354,6 +354,7 @@ label {
 
 .back-button {
   width: 50px;
+  cursor: pointer
 }
 
 .form-entries {
@@ -393,6 +394,7 @@ input, select {
   color: #495E57;
   text-align: center;
   padding: 10px 20px;
+  cursor: pointer;
 }
 
 select {
