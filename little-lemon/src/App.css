@@ -338,6 +338,12 @@ label {
   margin-bottom: 20px;
 }
 
+.booking-area{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .heading {
   display: flex;
   flex-direction: column;
@@ -347,16 +353,12 @@ label {
 }
 
 .back-button {
-  margin-left: 20%;
-  margin-top: 10px;
   width: 50px;
 }
 
 .form-entries {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-left: 20%;
-  margin-right: 20%;
   row-gap: 40px;
 }
 
@@ -369,8 +371,12 @@ label {
 
 .form {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  gap: 50px;
+  margin-left: 20%;
+  margin-right: 20%;
+  gap: 10px;
+  justify-content: space-around;
 }
 
 .form > button {
