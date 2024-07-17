@@ -15,6 +15,7 @@ function BookingForm(props) {
         console.log("Form Submitted!")
 
         setDate("");
+        props.setAvailableTimes({date: ""});
         setTime(props.availableTimes[0]);
         setNumPeople("1");
         setOccasion("birthday");
