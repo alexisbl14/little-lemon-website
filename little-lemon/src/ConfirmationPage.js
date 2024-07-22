@@ -8,6 +8,7 @@ function ConfirmationPage() {
     const months = ["January", "February", "March", "April", "May", "June", "July", 
         "August", "September", "October", "November", "December"];
     const month = months[date[1] - 1];
+    const day = date[2] - 1 + 1;
 
     return (
         <section className="booking-area">
@@ -20,7 +21,7 @@ function ConfirmationPage() {
                 <div className="booking-info-area">
                     <h4 className="black-text">Booking Information</h4>
                     <div className="booking-info-text">
-                        <h3 className="green-text">Date: {month} {date[2]}, {date[0]} </h3>
+                        <h3 className="green-text">Date: {month} {day}, {date[0]} </h3>
                         <h3 className="green-text">Time: {location.state.time}</h3>
                         <h3 className="green-text">Number of People: {location.state.numPeople}</h3>
                         <h3 className="green-text">Occasion: {location.state.occasion}</h3>
