@@ -8,6 +8,7 @@ import Menu from './Menu';
 import Booking from './Booking';
 import Order from './Order';
 import Login from './Login';
+import ConfirmationPage from './ConfirmationPage';
 import { fetchAPI, submitAPI } from './bookingAPI';
 
 export const updateTimes = (state, action) => {
@@ -45,6 +46,7 @@ function Nav() {
                 <Route path="/reservations" element={<Booking availableTimes={availableTimes} setAvailableTimes={dispatch}/>} />
                 <Route path="/order" element={<Order />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/reservations/confirmation" element={<ConfirmationPage/>} />
             </Routes>
         </div>
     )

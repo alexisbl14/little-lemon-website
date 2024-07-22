@@ -400,3 +400,30 @@ input, select {
 select {
   width: 240px;
 }
+
+.confirmation-text {
+  margin-left: 20%;
+  margin-top: 50px;
+}
+
+.booking-info-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.booking-info-text {
+  display: flex;
+  flex-direction: column;
+  background-color: #EDEFEE;
+  border-radius: 16px;
+  width: fit-content;
+  padding: 40px;
+  gap: 5px;
+}
+
+.booking-area > button {
+  align-self: center;
+  margin-top: 10px;
+}
