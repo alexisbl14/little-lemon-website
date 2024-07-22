@@ -419,7 +419,7 @@ select {
   background-color: #EDEFEE;
   border-radius: 16px;
   width: fit-content;
-  padding: 40px;
+  padding: 30px 40px;
   gap: 5px;
 }
 
