@@ -1,4 +1,13 @@
+import { useNavigate, useLocation } from "react-router-dom";
+
 function ConfirmationPage() {
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const date = location.state.date.split('-');
+    const months = ["January", "February", "March", "April", "May", "June", "July", 
+        "August", "September", "October", "November", "December"];
+    const month = months[date[1] - 1];
 
     return (
         <section className="booking-area">
@@ -10,13 +19,13 @@ function ConfirmationPage() {
             <div className="booking-info-area">
                 <h4 className="black-text">Booking Information</h4>
                 <div className="booking-info-text">
-                    <h3 className="green-text">Date: Jan 12, 2025</h3>
-                    <h3 className="green-text">Time: 17:30</h3>
-                    <h3 className="green-text">Number of People: 5</h3>
-                    <h3 className="green-text">Occasion: Birthday</h3>
+                    <h3 className="green-text">Date: {month} {date[2]}, {date[0]} </h3>
+                    <h3 className="green-text">Time: {location.state.time}</h3>
+                    <h3 className="green-text">Number of People: {location.state.numPeople}</h3>
+                    <h3 className="green-text">Occasion: {location.state.occasion}</h3>
                 </div>
             </div>
-            <button type="submit" onClick={() => console.log("back to Home button clicked")}><h4 className='black-text'>Back to Home</h4></button>
+            <button type="submit" onClick={() => navigate('/')}><h4 className='black-text'>Back to Home</h4></button>
         </section>
     );
 }

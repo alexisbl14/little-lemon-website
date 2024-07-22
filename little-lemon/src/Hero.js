@@ -1,8 +1,10 @@
 import React from 'react';
 import heroImg from './hero-img.svg';
 import './App.css';
+import { useNavigate } from 'react-router-dom';
 
 function Hero() {
+    const navigate = useNavigate();
     return (
         <section>
             <div className='hero'>
@@ -12,7 +14,7 @@ function Hero() {
                         <h2 className='white-text'>Chicago</h2>
                     </div>
                     <h3 className='white-text'>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</h3>
-                    <button type="button" onClick={() => console.log("button clicked")}><h4 className='black-text'>Reserve a Table</h4></button>
+                    <button type="button" onClick={() => navigate('/reservations')}><h4 className='black-text'>Reserve a Table</h4></button>
                 </div>
                 <img src={heroImg} alt="Hero" className='hero-img'/>
             </div>

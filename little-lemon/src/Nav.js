@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import "./App.css";
 import { Routes, Route, Link } from 'react-router-dom';
-import { useReducer, useState, useEffect } from "react";
+import { useReducer } from "react";
 import Homepage from './Homepage';
 import About from './About';
 import Menu from './Menu';
