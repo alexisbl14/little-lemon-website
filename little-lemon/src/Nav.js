@@ -1,29 +1,30 @@
 import logo from './logo.svg';
 import "./App.css";
 import { Routes, Route, Link } from 'react-router-dom';
-import { useReducer, useState } from "react";
+import { useReducer, useState, useEffect } from "react";
 import Homepage from './Homepage';
 import About from './About';
 import Menu from './Menu';
 import Booking from './Booking';
 import Order from './Order';
 import Login from './Login';
+import { fetchAPI, submitAPI } from './bookingAPI';
 
-export const updateTimes = (action) => {
-    if(action.date === "") {return []};
-    return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
+export const updateTimes = (state, action) => {
+    const date = new Date(action.date.replace(/-/g, '/'));
+    if(action.date === "") {return fetchAPI(new Date())};
+    return fetchAPI(date);
 }
 
 export const initializeTimes = () => {
-    return [];
+    const date = new Date();
+    return fetchAPI(date);
 }
 
 
 function Nav() {
-
     const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
 
-    console.log(availableTimes);
     return(
         <div>
             <nav>
