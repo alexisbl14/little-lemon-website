@@ -427,3 +427,20 @@ select {
   align-self: center;
   margin-top: 10px;
 }
+
+.booking-conf-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 20%;
+  gap: 100px;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  border: 1px solid black;
+  text-align: center;
+  gap: 10px;
+}
