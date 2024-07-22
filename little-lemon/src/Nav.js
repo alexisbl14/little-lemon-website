@@ -43,7 +43,7 @@ function Nav() {
                 <Route path="/" element={<Homepage/>} />
                 <Route path="/about" element={<About />} />
                 <Route path="/menu" element={<Menu />} />
-                <Route path="/reservations" element={<Booking availableTimes={availableTimes} setAvailableTimes={dispatch}/>} />
+                <Route path="/reservations" element={<Booking availableTimes={availableTimes} setAvailableTimes={dispatch} submitForm={submitAPI}/>} />
                 <Route path="/order" element={<Order />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/reservations/confirmation" element={<ConfirmationPage/>} />

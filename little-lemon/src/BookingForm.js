@@ -1,7 +1,6 @@
 import { useState } from "react";
 import backButton from "./backButton.svg";
 import { useNavigate } from "react-router-dom";
-import { submitAPI } from "./bookingAPI";
 
 function BookingForm(props) {
 
@@ -21,7 +20,7 @@ function BookingForm(props) {
             occasion: occasion
         }
 
-        if (submitAPI(formData)) {
+        if (props.submitForm(formData)) {
             console.log("Form Submitted!")
             setDate("");
             props.setAvailableTimes({date: ""});
