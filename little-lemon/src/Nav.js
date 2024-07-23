@@ -11,7 +11,7 @@ import Login from './Login';
 import ConfirmationPage from './ConfirmationPage';
 import { fetchAPI, submitAPI } from './bookingAPI';
 
-export const updateTimes = (state, action) => {
+export const updateTimes = (action) => {
     const date = new Date(action.date.replace(/-/g, '/'));
     if(action.date === "") {return fetchAPI(new Date())};
     return fetchAPI(date);
