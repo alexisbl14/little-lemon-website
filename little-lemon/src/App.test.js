@@ -17,16 +17,17 @@ test('renders the BookingForm Heading', () => {
 });
 
 test('validate initializeTimes function', () => {
-  expect(initializeTimes()).toStrictEqual(fetchAPI(new Date()))
+  expect(initializeTimes()).toStrictEqual({availableTimes: fetchAPI(new Date())})
 });
 
 describe('validate updateTimes function', () => {
+  const state = initializeTimes();
   test('returns times for date', () => {
-    expect(updateTimes({date: "2024-07-20"})).toStrictEqual(fetchAPI(new Date("2024/07/20")))
+    expect(updateTimes(state, {date: "2024-07-20"})).toStrictEqual({availableTimes: fetchAPI(new Date("2024/07/20"))})
   });
 
   test('returns no times for no date', () => {
-    expect(updateTimes({date: ""})).toStrictEqual(fetchAPI(new Date()))
+    expect(updateTimes(state, {date: ""})).toStrictEqual({availableTimes: fetchAPI(new Date())})
   });
 });
 

@@ -11,20 +11,27 @@ import Login from './Login';
 import ConfirmationPage from './ConfirmationPage';
 import { fetchAPI, submitAPI } from './bookingAPI';
 
-export const updateTimes = (action) => {
-    const date = new Date(action.date.replace(/-/g, '/'));
-    if(action.date === "") {return fetchAPI(new Date())};
-    return fetchAPI(date);
+export const updateTimes = (state, action) => {
+    console.log("action", action);
+    console.log("state", state);
+    if(action.date === "") {return {availableTimes: fetchAPI(new Date())}}
+    else {
+        console.log("action date", action.date);
+        const date = new Date(action.date.replace(/-/g, '/'));
+        console.log("date in updateTimes", date);
+        return {availableTimes: fetchAPI(date)}
+    }
 }
 
 export const initializeTimes = () => {
     const date = new Date();
-    return fetchAPI(date);
+    return {availableTimes: fetchAPI(date)};
 }
 
 
 function Nav() {
-    const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+    const [state, dispatch] = useReducer(updateTimes, initializeTimes());
+    console.log("state", state.availableTimes);
 
     return(
         <div>
@@ -43,7 +50,7 @@ function Nav() {
                 <Route path="/" element={<Homepage/>} />
                 <Route path="/about" element={<About />} />
                 <Route path="/menu" element={<Menu />} />
-                <Route path="/reservations" element={<Booking availableTimes={availableTimes} setAvailableTimes={dispatch} submitForm={submitAPI}/>} />
+                <Route path="/reservations" element={<Booking availableTimes={state.availableTimes} setAvailableTimes={dispatch} submitForm={submitAPI}/>} />
                 <Route path="/order" element={<Order />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/reservations/confirmation" element={<ConfirmationPage/>} />
