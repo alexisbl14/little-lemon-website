@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 function BookingForm(props) {
 
-    const [date, setDate] = useState("");
+    const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
+    // set min date to today
+    const minDate = new Date().toISOString().split('T')[0];
     const [time, setTime] = useState(props.availableTimes[0]);
     const [numPeople, setNumPeople] = useState("1");
     const [occasion, setOccasion] = useState("Birthday");
@@ -43,7 +45,7 @@ function BookingForm(props) {
                 <span className="form-entries">
                     <div className="Field">
                         <label htmlFor="date">Date For Reservation:</label>
-                        <input type="date" name="date" id="date" value={date} onChange={e => {
+                        <input type="date" name="date" id="date" value={date} min={minDate} onChange={e => {
                             setDate(e.target.value);
                             props.setAvailableTimes({date: e.target.value});
                             }}/>
@@ -58,7 +60,7 @@ function BookingForm(props) {
                     </div>
                     <div className="Field">
                         <label htmlFor="numPeople">Number of People:</label>
-                        <input type="number" name="numPeople" id="numPeople" min="1" max="12" value={numPeople} onChange={e => setNumPeople(e.target.value)}/>
+                        <input type="number" name="numPeople" id="numPeople" min="1" max="12" value={numPeople} required onChange={e => setNumPeople(e.target.value)}/>
                     </div>
                     <div className="Field">
                         <label htmlFor="selectedOccasion">Occasion:</label>
