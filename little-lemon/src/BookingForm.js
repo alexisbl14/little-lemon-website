@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 function BookingForm(props) {
 
     const [date, setDate] = useState("");
-    console.log(props.availableTimes);
     const [time, setTime] = useState(props.availableTimes[0]);
     const [numPeople, setNumPeople] = useState("1");
     const [occasion, setOccasion] = useState("Birthday");

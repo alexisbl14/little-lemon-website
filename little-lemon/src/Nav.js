@@ -12,13 +12,9 @@ import ConfirmationPage from './ConfirmationPage';
 import { fetchAPI, submitAPI } from './bookingAPI';
 
 export const updateTimes = (state, action) => {
-    console.log("action", action);
-    console.log("state", state);
     if(action.date === "") {return {availableTimes: fetchAPI(new Date())}}
     else {
-        console.log("action date", action.date);
         const date = new Date(action.date.replace(/-/g, '/'));
-        console.log("date in updateTimes", date);
         return {availableTimes: fetchAPI(date)}
     }
 }
@@ -31,7 +27,6 @@ export const initializeTimes = () => {
 
 function Nav() {
     const [state, dispatch] = useReducer(updateTimes, initializeTimes());
-    console.log("state", state.availableTimes);
 
     return(
         <div>
