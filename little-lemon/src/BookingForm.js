@@ -70,7 +70,7 @@ function BookingForm(props) {
                         </select>
                     </div>
                 </span>
-                <button type="submit"><h4 className='black-text submit-button'>Submit</h4></button>
+                <button type="submit" aria-label="On Click"><h4 className='black-text submit-button'>Submit</h4></button>
             </form>
         </section>
     )
