@@ -21,7 +21,6 @@ function BookingForm(props) {
             numPeople: numPeople,
             occasion: occasion
         }
-
         if (props.submitForm(formData)) {
             console.log("Form Submitted!")
             setDate("");
@@ -45,14 +44,14 @@ function BookingForm(props) {
                 <span className="form-entries">
                     <div className="Field">
                         <label htmlFor="date">Date For Reservation:</label>
-                        <input type="date" name="date" id="date" value={date} min={minDate} onChange={e => {
+                        <input type="date" name="date" id="date" value={date} min={minDate} required onChange={e => {
                             setDate(e.target.value);
                             props.setAvailableTimes({date: e.target.value});
                             }}/>
                     </div>
                     <div className="Field">
                         <label htmlFor="time">Time For Reservation:</label>
-                        <select name="time" id="time" value={time} onChange={e => setTime(e.target.value)}>
+                        <select name="time" id="time" value={time} required onChange={e => setTime(e.target.value)}>
                             {props.availableTimes.map((time) => {
                                 return <option key={time} value={time}>{time}</option>
                             })}
